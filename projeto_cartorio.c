@@ -68,7 +68,7 @@ int consulta()
 	char cpf[40];
 	char conteudo[200];
 	
-	printf("Digite o cpf a ser consultado: ");
+	printf("Digite o cpf a ser consultado: ");//recebendo qual usuário vai ser consultado
 	scanf("%s", cpf);
 	
 	FILE *file;
@@ -104,6 +104,7 @@ int deletar()
 	if(file == NULL)
 	{
 		printf("O usuário não se encontra no sistema! \n");
+		fclose(file);
 		system("pause");
 	} 
 }
@@ -173,4 +174,5 @@ int main ()
     
     else
         printf("Senha incorreta!");
+
 }    
